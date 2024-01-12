@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    /* background-color: #fff; */
+}
+li{
+    list-style: none;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color: orange;
+}
+header{
+    position:relative;
+    padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap:2rem;
+}
+.navbar .toggle-btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.active-btn{
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.1 ease;
+}
+.active-btn:hover{
+    scale: 1.02;
+    color:#fff
+}
+.active-btn:active{
+    scale: 0.99;
+}
+
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top:60px;
+    width:300px;
+    height: 0;
+    background: rgb(255, 255, 255, 0.1);
+    backdrop-filter:blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    list-style: none;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: none;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.dropdown_menu .active-btn{
+    width:  100%;
+    display: flex;
+    justify-content: center;
+}
+.dropdown_menu.open{
+    height: 500px;
+}
+
+.para{
+    background-color: #1d1d1f;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 700;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sec_one{
+    background-image: url(https://www.trustedreviews.com/wp-content/uploads/sites/54/2023/09/iPhone-15-Pro-Titanium.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.sec_two{
+    background-image: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=2560&hei=1440&fmt=jpeg&qlt=95&.v=1692846363993);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.sec_three{
+    background-image: url(https://dmxvlyap9srmn.cloudfront.net/production/articles/641/APPLE_IPHONE.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sec_one_content span, .sec_two_content span, .sec_three_content span{
+    color: blue;
+    font-size: 1.2rem;
+}
+.sec_one_content{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.3;
+    padding-top: 30px;
+}
+.sec_two_content{
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.3;
+    padding-top: 30px;
+}
+.sec_three_content{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.3;
+    padding-top: 30px;
+}
+.sec_one_content h1, .sec_two_content h1{
+    font-weight: 600;
+    font-size: 3rem;
+}
+.sec_one_content h2, .sec_two_content h2, .sec_three_content h2{
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+.sec_three .btn{
+border: 2px solid white;
+padding: 10px 12px;
+border-radius: 50px;
+background-color: white;
+color: #111;
+margin-left: 30px;
+line-height: 4;
+
+}
+.sec_three .btn:hover{
+cursor: pointer;
+background-color: #E2E2E2;
+ /* border: none; */
+/* outline: 0;  */
+}
+.sec1-img{
+    background-image: url(https://images.indianexpress.com/2022/10/AppleWatchUltra_LEAD_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+.sec2-img{
+    background-image: url(https://www.mobipicker.com/wp-content/uploads/2016/02/macbook-pro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.sec3-img{
+    background-image: url(https://images.idgesg.net/images/article/2020/05/magic-keyboard-ipad-pro-100841327-large.3x2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+.sec4-img{
+    background-image: url(https://tse2.mm.bing.net/th?id=OIP.T05uw_M-GNsZY7FiMY1xQwHaEK&pid=Api&P=0&h=180);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.sec_of_two{
+    display: flex;
+}
+
+
+footer{
+    /* margin-top: 15px; */
+    background-color: #f4f4f7;
+}
+
+.foot-panel2{
+    /* background-color: #222f3d; */
+    padding-left: 20px;
+    color: #111;
+    height: 300px;
+    display: flex;
+    justify-content:center;
+    gap:60;
+    align-items: center;
+}
+.foot-panel2 ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    color:#0000008f;
+}
+
+.foot-panel4{
+    border-top: 1px solid #111;
+    margin: 0 300px;
+    color: #0000008f;
+    height: 80px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-size: 0.7rem;
+    text-align: center;
+}
+.pages{
+padding-top:25px ;
+}
+.pages a{
+    color: #0000008f;
+}
+.copyright{
+
+    padding-top: 5px;
+}
+
+
+
+
+@media (max-width:992px){
+    .navbar .links,
+    .navbar .active-btn{
+        display: none;
+    }
+    .navbar .toggle-btn{
+        display: block;
+    }  
+    .dropdown_menu{
+        display:block;
+    }
+    .sec_one_content {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.3;
+        padding-top: 30px;
+    }
+    .sec_one_content h2{
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+    .sec_one{
+        height: 60vh;
+    }
+    .sec_three{
+        height: 70vh;
+        text-align: center;
+        line-height: 1;
+    }
+    .sec_two{
+        background-image: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=2560&hei=1440&fmt=jpeg&qlt=95&.v=1692846363993);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60vh;
+        width: 100%;
+        background-color: #f4f4f4;
+    }
+    .sec_two_content{
+        color: #111;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.3;
+        padding-top: 230px;
+    }
+    .sec_three_content{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.3;
+        padding-top: 230px;
+    }
+    .sec_of_two{
+        display: flex;
+        flex-direction: column;
+    }
+    .sec_of_two, .sec_three_content{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.3;
+    } 
+    .foot-panel4{
+    margin:auto;
+    }
+    .foot-panel2{
+        padding-left: 10px;
+        line-height:1.2;
+    }
+}
+@media (max-width:576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+    
+}
